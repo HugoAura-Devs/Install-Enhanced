@@ -61,6 +61,16 @@ jobs:
 
       - name: Install dependencies
         run: python -m pip install -r requirements-py3.8.txt
+      - name: Import smoke test (py3.8)
+        shell: python
+        run: |
+          import pathlib, importlib, sys
+          root = pathlib.Path("src").resolve()
+          sys.path.insert(0, str(root))
+          names = {".".join(p.with_suffix("").relative_to(root).parts) for p in root.rglob("*.py") if "__pycache__" not in p.parts}
+          for name in sorted(names):
+              importlib.import_module(name)
+          print(f"py3.8 import OK ({len(names)} modules)")
 
       - name: Build project
         run: .\scripts\build.bat

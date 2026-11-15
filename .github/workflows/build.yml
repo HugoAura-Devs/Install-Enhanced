@@ -60,6 +60,16 @@ jobs:
         run: .\scripts\build.bat
         shell: cmd
 
+      - name: Import smoke test (py3.8)
+        shell: python
+        run: |
+          import pathlib, importlib, sys
+          root = pathlib.Path("src").resolve()
+          sys.path.insert(0, str(root))
+          names = {".".join(p.with_suffix("").relative_to(root).parts) for p in root.rglob("*.py") if "__pycache__" not in p.parts}
+          for name in sorted(names):
+              importlib.import_module(name)
+          print(f"py3.8 import OK ({len(names)} modules)")
       - name: Rename compatibility artifact
         shell: powershell
         run: Rename-Item -LiteralPath dist/AuraInstaller.exe -NewName AuraInstaller-py3-8.exe
