@@ -1305,7 +1305,7 @@ HugoAura 是针对希沃设备的增强工具。
 作者: HugoAura Devs
 GUI 基于: ttkbootstrap & tkinter
 GitHub 主仓库: blingbling-bow/HugoAura-Enhanced
-Install 主仓库: blingbling-bow/HugoAura-Install"""
+Install 主仓库: HugoAura-Devs/Install-Enhanced"""
 
         messagebox.showinfo("关于 HugoAura-Install", about_text)
 

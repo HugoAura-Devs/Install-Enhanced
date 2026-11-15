@@ -131,7 +131,7 @@ def main() -> None:
     if prev_tag:
         lines += [
             "",
-            f"**完整更新日志：** https://github.com/blingbling-bow/HugoAura-Install/compare/{prev_tag}...{tag}",
+            f"**完整更新日志：** https://github.com/HugoAura-Devs/Install-Enhanced/compare/{prev_tag}...{tag}",
         ]
     lines += ["", FOOTER_FEEDBACK, ""]
 

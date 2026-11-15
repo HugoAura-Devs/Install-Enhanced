@@ -6,9 +6,10 @@ APP_NAME = "HugoAura"
 TARGET_PROCESS_NAME = ["SeewoServiceAssistant.exe", "SeewoCore.exe", "SeewoAbility.exe"]
 
 # GitHub 仓库信息
-GITHUB_OWNER = "blingbling-bow"
-GITHUB_REPO = "HugoAura-Enhanced"
-GITHUB_DL_REPO = "HugoAura-Enhanced"
+# 注意: 两个仓库均已迁移到 HugoAura-Devs 组织 (旧名经 GitHub 重定向仍可用)
+GITHUB_OWNER = "HugoAura-Devs"
+GITHUB_REPO = "Main-Enhanced"
+GITHUB_DL_REPO = "Main-Enhanced"
 
 # 文件名
 ASAR_FILENAME = "app-patched.asar"
@@ -48,8 +49,9 @@ BASE_DOWNLOAD_URLS = [
 GITHUB_API_URL = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/releases"
 
 # 安装器自身所在仓库 (owner/repo), 启动时检查安装器自更新用。
-# 仓库曾更名, 旧名 HugoAura-Install 会重定向, 此处使用现名
-INSTALLER_REPO = "blingbling-bow/HugoAura-Enhanced-Install"
+# 仓库历经多次更名 (HugoAura-Install -> HugoAura-Enhanced-Install ->
+# HugoAura-Devs/Install-Enhanced), 旧名经 GitHub 重定向仍可用, 此处使用现名
+INSTALLER_REPO = "HugoAura-Devs/Install-Enhanced"
 
 # 目标路径模式
 SWASS_PATH_PATTERN = r"C:\\Program Files (x86)\\Seewo\\SeewoService\\SeewoService_*\\SeewoServiceAssistant\\resources"
