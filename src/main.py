@@ -52,7 +52,7 @@ def parse_arguments():
     )
     parser.add_argument(
         "--mirror",
-        help="优先使用的镜像源前缀, 例如 https://gh-proxy.example (自动回退其余镜像)",
+        help="优先使用的镜像源前缀, 需为 <镜像域名>/https://github.com/HugoAura-Devs/Main-Enhanced/releases/download 完整形式",
         type=str,
     )
     parser.add_argument(

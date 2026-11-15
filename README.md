@@ -14,7 +14,7 @@ HugoAura 的生命周期管理工具
 
 ### 基本用法
 
-1. 下载最新的 [Release](https://github.com/blingbling-bow/HugoAura-Install/releases) EXE 包
+1. 下载最新的 [Release](https://github.com/HugoAura-Devs/Install-Enhanced/releases) EXE 包
 2. 以管理员身份运行 `AuraInstaller.exe`
 3. 按照提示选择版本并完成安装
 
@@ -33,7 +33,7 @@ options:
   --pre                 安装最新的预发行版本
   -d DIR, --dir DIR     指定希沃管家安装目录
   -y, --yes             非交互模式, 自动确认所有操作
-  --mirror MIRROR       优先使用的镜像源前缀, 例如 https://gh-proxy.example (自动回退其余镜像)
+  --mirror MIRROR       优先使用的镜像源前缀, 需为 <镜像域名>/https://github.com/HugoAura-Devs/Main-Enhanced/releases/download 完整形式
   --no-speedtest        跳过下载测速, 按内置顺序直接下载
   --dry-run             不进行实际安装操作, 仅执行下载流程
   --list-exit-codes     显示所有退出代码及其释义
@@ -57,8 +57,8 @@ HugoAura-Install.exe --cli -p "C:\path\to\aura.zip" -y
 # 指定安装目录
 HugoAura-Install.exe --cli -l -d "C:\Program Files (x86)\Seewo\SeewoService\SeewoService_1.0.0\SeewoServiceAssistant\resources" -y
 
-# 指定优先镜像源 (自动回退到其余内置镜像与官方直连)
-HugoAura-Install.exe --cli -l -y --mirror https://gh-proxy.example
+# 指定优先镜像源 (需含完整 GitHub 下载路径, 失败自动回退其余内置镜像与官方直连)
+HugoAura-Install.exe --cli -l -y --mirror "https://gh-proxy.example/https://github.com/HugoAura-Devs/Main-Enhanced/releases/download"
 
 # 跳过测速直接按内置顺序下载 (自动化环境最省时)
 HugoAura-Install.exe --cli -l -y --no-speedtest
